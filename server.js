@@ -53,7 +53,7 @@ app.post("/api/profile", (req, res) => {
 
 app.use(express.static(__dirname));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Maze Math draait op: http://localhost:${PORT}`);
 });
